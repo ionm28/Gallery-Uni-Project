@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta charset="UTF-8">
+      <title>Photo album</title>
+      <link rel="stylesheet" href="h1.css">
+   </head>
+   <body>
+        <h1>Photo album</h1>
+        <ul id="authors-list">
+            
+        </ul>
+        <section>
+        <h2>About:</h2>
+        <p><em>This is a photo album that includes the most famous and talented authors of all time!</em></p>
+        </section>
+        <table id="gallery-table">
+           <caption><em><strong>Famous authors</strong></em></caption>
+           <thead>
+          <tr>
+                <th>image</th>
+                <th>author</th>
+                <th>alt</th>
+                <th>tags</th>
+                <th>description</th>
+            </tr>
+           </thead>
+          <tbody id="t-body"></tbody>
+        </table>
+        <div id="modal-use">
+          <span class="hide">&times</span>
+        <p>
+        <form id="gallery-form" action="https://wt.ops.labs.vu.nl/api23/9ebcac1b" method="post">
+        <input  type="text" name="image" id="image" accept="image/*" placeholder="URL.." required>
+        <input class="input" type="text" name="author" id="author" placeholder="Author.." required>
+        <input class="input" type="text" name="alt" id="alt" placeholder="Alt.." required>
+        <input class="input" type="text" name="tags" id="tags" placeholder="Tags.." required>
+        <input class="input2" type="text" name="description" id="description" placeholder="Description.." required> <input class="submitBtn" type="submit" name="submit_btn" value="Submit">
+         </form>
+        </p>
+        <p>
+         <form id="gallery-update" action="https://wt.ops.labs.vu.nl/api23/9ebcac1b" method="put">
+          <input type="text" name="id" id="idUp" required>
+          <input  type="text" name="image" id="imageUp" accept="image/*" placeholder="URL..">
+          <input class="input" type="text" name="author" id="authorUp" placeholder="Author.." >
+          <input class="input" type="text" name="alt" id="altUp" placeholder="Alt.." >
+          <input class="input" type="text" name="tags" id="tagsUp" placeholder="Tags.." >
+          <input class="input2" type="text" name="description" id="descriptionUp" placeholder="Description.." >
+         <input class="submitBtn" type="submit" name="update_btn" id="update-table" value="Update">
+         </form>
+        </p>
+        </div>
+         <section>
+        <button id="modal-button">Add</button>
+         <button id="reset-table">Reset</button>
+        </section>
+        <p><a href="#literature">Literature</a> &nbsp;
+            <a href="#mentions">Mentions</a> &nbsp;
+        </p>
+        <section id="literature">
+                <h2>Literature:</h2>
+                <figure>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Old_book_bindings.jpg/2560px-Old_book_bindings.jpg" alt="Old books" width="200" height="200">
+                <figcaption>Old books</figcaption>
+                </figure>
+                <dl>
+                    <dt><em><strong>Quote:</strong></em></dt>
+                <dd><pre>
+                    It 
+                        takes
+                a
+                    <strong>great</strong> 
+                         deal 
+                 of 
+                       <strong>history</strong> 
+                  to 
+            produce 
+                     a
+                   little
+                         <strong>literature</strong>!
+                                -<em>Henry James</em>
+                </pre></dd>
+                <dt><em><strong>Types of literature:</strong></em></dt>
+                <dd><ol type="I">
+                    <li>Drama</li>
+                    <li>Fable</li>
+                    <li>Fairy Tale</li>
+                    <li>Fantasy</li>
+                    <li>Fiction</li>
+                    <li>Fiction in Verse</li>
+                    <li>Folklore</li>
+                    <li>Historical Fiction</li>
+                </ol></dd>
+             </dl>
+        </section>
+        <section id="mentions">
+            <h2>Mentions:</h2>
+                <p><em><strong>Other important authors:</strong></em></p>
+                    <nav>
+                        <ul class="listUl">
+                            <li><a href="https://en.wikipedia.org/wiki/William_Shakespeare" target="_blank">William Shakespeare</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/James_Joyce" target="_blank">James Augustine Aloysius Joyce</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Vladimir_Nabokov" target="_blank">Vladimir Nabokov</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/William_Faulkner" target="_blank">William Faulkner</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Charles_Dickens" target="_blank">Charles Dickens</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Anton_Chekhov" target="_blank">Anton Chekhov</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Gustave_Flaubert" target="_blank">Gustave Flaubert</a></li>
+                          <li><abbr>etc.</abbr></li>
+                        </ul>
+                      </nav>
+        </section>
+      <script src="H2.js"></script> 
+   </body>
+</html>
+
+<!--We tested CSS and HTML markup of our page on Google Chrome, Microsoft Edge and Safari and the print styles are all the same.
+For the screen sizes we used the screen emulator and tried out different phone screens. We also entered the website on our phones. -->
+<!--For the guideline 1.1 we made the images accessible through the use of a text alternative via the attribute 'alt'. For 1.3 we used column headers for the table and different ordering techniques so that the sequences are meaningful.
+For 1.4, colors are not used as the only visual means of conveying information as there is also text information regarding most of the relevant stuff. For 2.4, the purpose of the links can be deducted from their naming, the form cells 
+are displaying what should be written in them, there are different labels and heading that describe the topic or purpose of that specific section. There is also a bypass mechanism for the literature and mentions sections.
+For 2.1, the website is operable through a keyboard interface, without the need of a mouse.-->
